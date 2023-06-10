@@ -1,0 +1,41 @@
+/* CSS стили для выравнивания заголовка */
+body 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.form-container 
+{
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-container label 
+{
+  display: block;
+  margin-bottom: 10px;
+}
+.form-container input[type="text"],
+.form-container input[type="password"] 
+{
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.form-container button[type="submit"] 
+{
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form-title 
+{
+  margin-bottom: 20px;
+}

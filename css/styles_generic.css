@@ -1,0 +1,43 @@
+.error-message 
+{
+  color: red;
+  margin-top: 10px;
+}
+
+.container 
+{
+  width: 300px;
+  margin: 100px auto;
+}
+
+form 
+{
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"],
+button 
+{
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+table 
+{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td 
+{
+  padding: 5px;
+  border: 1px solid black;
+}
+
+a 
+{
+  display: block;
+  margin-top: 10px;
+}
