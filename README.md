@@ -1,9 +1,9 @@
-Это проект в университете ИГУ.
-Он включает в себя
-механику логин/пароль и таблицу занятий, которую можно изменять
+This is a project at ISU University.
+It includes:
+login / password mechanics and a table of classes that can be changed
 
 
-Как запустить:
-1) папку mysql нужно объединить с той, где установлен mysql
-2) включить xmapp control и включить там mysql и apache
-3) для доступа из интернета подключить проброс портов на маршрутизаторе
+How to run:
+1) the mysql folder must be opposed to the one where mysql is installed
+2) enable xmapp management and enable mysql and apache there
+3) to access from the Internet, connect port forwarding on the router
