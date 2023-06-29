@@ -13,10 +13,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
   if (isValidUsername($username))
   {
     // Хэширование пароля
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    $hashedPassword = md5($password);
 
     // Подготовка SQL-запроса для добавления пользователя
-    $stmt = $pdo->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+    $stmt = $pdo->prepare("INSERT INTO ".$db_users_table_name." (username, password) VALUES (?, ?)");
     $stmt->execute([$username, $hashedPassword]);
 
     // Перенаправление пользователя после успешной регистрации

@@ -19,7 +19,10 @@ if (isset($_POST['lesson_id']))
   $lessonId = $_POST['lesson_id'];
 
   // Подготовка SQL-запроса для удаления занятия пользователя
-  $stmt = $pdo->prepare("DELETE FROM user_lessons WHERE id = :lesson_id");
+  $stmt = $pdo->prepare("DELETE FROM ".$db_user_lessons_table_name." WHERE id = :lesson_id");
+  $stmt->execute([':lesson_id' => $lessonId]);
+  
+  $stmt = $pdo->prepare("DELETE FROM ".$db_lessons_table_name." WHERE id = :lesson_id");
   $stmt->execute([':lesson_id' => $lessonId]);
 
   // Перенаправление обратно на личный кабинет с сообщением об успешном удалении

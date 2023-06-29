@@ -1,8 +1,12 @@
 <?php
 $host = 'localhost';  // Адрес хоста базы данных (обычно localhost)
-$db = 'myapp';  // Имя базы данных
-$user = 'myapp_db_common_user';  // Имя пользователя базы данных
-$password = 'czT_2GM9s#6KmUT';  // Пароль для подключения к базе данных
+$db = 'study-db';  // Имя базы данных
+$user = 'root';  // Имя пользователя базы данных
+$password = '';  // Пароль для подключения к базе данных
+
+$db_users_table_name = 'users_tab';
+$db_lessons_table_name = 'lessons_tab';
+$db_user_lessons_table_name = 'user_lessons_tab';
 
 try 
 {

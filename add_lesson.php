@@ -18,14 +18,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
   $lessonDate = date('Y-m-d', strtotime($lessonDate));
 
   // Подготовка SQL-запроса для добавления занятия
-  $stmt = $pdo->prepare("INSERT INTO lessons (lesson_name, teacher_name, lesson_date) VALUES (?, ?, ?)");
+  $stmt = $pdo->prepare("INSERT INTO ".$db_lessons_table_name." (lesson_name, teacher_name, lesson_date) VALUES (?, ?, ?)");
   $stmt->execute([$lessonName, $teacherName, $lessonDate]);
 
   // Получение ID добавленного занятия
   $lessonId = $pdo->lastInsertId();
 
   // Связывание занятия с пользователем
-  $stmt = $pdo->prepare("INSERT INTO user_lessons (user_id, lesson_id) VALUES ((SELECT id FROM users WHERE username = :username), :lesson_id)");
+  $stmt = $pdo->prepare("INSERT INTO ".$db_user_lessons_table_name." (user_id, lesson_id) VALUES ((SELECT id FROM ".$db_users_table_name." WHERE username = :username), :lesson_id)");
   $stmt->execute([':username' => $username, ':lesson_id' => $lessonId]);
 
   // Перенаправление обратно на страницу личного кабинета
